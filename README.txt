@@ -3,6 +3,7 @@
 Aplikasi Pemrograman Pascal Bang Firdam
 Teknik Informatika / Smester 1
 Universitas Komputer Indonesia
+Compiler : Dev-Pascal
 
 *****************************************************************/
 
