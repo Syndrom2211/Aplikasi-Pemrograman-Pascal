@@ -1,0 +1,305 @@
+Function Nama_Buku(Input Kode:string) => string
+{I.S : Kode buku sudah terdefinisi}
+{F.S : Menghasilkan fungsi nama buku}
+
+Kamus :
+
+Algoritma :
+	if(Kode = 'FSK01')or(Kode = 'fsk01') then
+		Nama_Buku <= 'Fisika'
+		else if(Kode = 'KIM02') or (Kode = 'kim02') then
+			Nama_Buku <= 'Kimia'
+			else if(Kode = 'BIG03') or (Kode = 'big03') then
+				Nama_Buku <= 'Biologi'
+				else if(Kode = 'MTK04') or (Kode = 'mtk04') then
+					Nama_Buku <= 'Matematika'
+					else
+					Nama_Buku <= 'Bahasa Indonesia'
+			    	     Endif
+			     Endif
+		     Endif
+	Endif
+Endfunction
+
+Function FungsiHarga(Input Stok,Harga_Beli:integer) => real
+{I.S : Stok buku dan harga beli sudah terdefinisi}
+{F.S : Menghasilkan Fungsi Harga Jual}
+
+Kamus :
+	HrgJual : real
+
+Algoritma :
+	if(Stok >= 20)
+	then
+	HrgJual     := Harga_Beli + Harga_Beli * 0.075
+     	FungsiHarga := HrgJual - HrgJual * 0.025
+	Endif
+	
+	if(Stok < 20)
+	then
+	FungsiHarga := Harga_Beli + Harga_Beli * 0.125
+	Endif
+Endfunction
+
+Function periksa_password(Input password1:string) => boolean
+{I.S : Password sudah terdefinisi}
+{F.S : Menghasilkan fungsi periksa password}
+
+Kamus :
+
+Algoritma :
+	if(password1 = password2) then
+		periksa_password <= true
+	else
+		periksa_password <= false
+	Endif
+Endfunction
+
+Procedure Benar
+{I.S : User memasukkan password}
+{F.S : Login diterima jika password benar}
+
+Kamus :
+Function periksa_password(Input password1:string) => boolean
+
+Algoritma :
+	if(periksa_password(password2)) then
+		Output('*****************')
+		Output('Login Berhasil ! ')
+		Output('*****************')
+	Endif
+Endprocedure
+
+Procedure Salah
+{I.S : User memasukkan username dan password}
+{F.S : Menghasilkan prosedur jika password salah di masukkan}
+
+Kamus :
+
+Algoritma :
+	if(password1 <> password2) or (username1 <> username2) then
+		output('*****************')
+		output('Password Salah ! ')
+		output('*****************')
+		JumMasukPassword <= JumMasukPassword + 1
+	Endif
+Endprocedure
+		
+Procedure Peringatan	
+{I.S : User memasukkan username dan password}
+{F.S : Login diterima jika username dan password diterima}
+
+Kamus :
+	JumMasukPassword : integer
+
+Algoritma :
+	if(JumMasukPassword = 2)then
+		output('************************************************************')
+		output('Anda Salah 2x, Satu kali lagi salah maka program akan keluar')
+		output('************************************************************')
+	Endif
+Endprocedure
+
+Procedure Isidata(Output N:integer;Output Book:buku)
+{I.S : User memasukkan banyaknya data (N) dan data buku}
+{F.S : Menghasilkan data buku}
+
+Kamus :
+	i : integer
+
+Algoritma :
+	//Memasukkan banyaknya data (N)
+	Output('Banyaknya Data : ')
+	Input(N)
+	While (N > 5) do
+		Output('Batas nya hanya sampai 5 data !')
+		Output('Banyaknya Data : ')
+		Input(N)
+	Endwhile
+	Output('Data Buku')
+	Output('-------------------------------------------------------')
+	Output('| Kode Buku |     Nama Buku     |  Harga Beli  | Stok |')
+	Output('-------------------------------------------------------')
+	For i <= 1 to N do
+		Output('|           |                   |  Rp.         |      |')
+		Input(Book[i].Kode_Buku)
+		Book[i].Nama_Buku <= Nama_Buku(Book[i].Kode_Buku)
+		Output(Book[i].Nama_Buku)
+		Input(Book[i].Harga_Beli)
+		Input(Book[i].Stok)
+	Endfor
+	Output('-------------------------------------------------------')
+Endprocedure
+
+Procedure TampilData(Input N:integer;Book:Buku)
+{I.S : Banyaknya data (N) dan data buku sudah terderfinisi}
+{F.S : Menampilkan Data Buku}
+
+Kamus :
+	i,j,x,max,temp2 : integer
+   	temp      	: string
+   	temp3    	: real
+	Function FungsiHarga(Input Stok,Harga_Beli:integer) => real
+
+Algoritma :
+	x <= N
+	For i <= 1 to N-1 do
+		max <= 1
+		For j <= 2 to x do
+			if(Book[j].Kode_Buku > Book[max].Kode_Buku) then
+				max <= j
+			Endif
+		Endfor
+	temp <= Book[max].Kode_Buku
+     	Book[max].Kode_Buku <= Book[j].Kode_Buku
+     	Book[j].Kode_Buku <= temp
+     	x <= x - 1
+	Endfor
+	
+	x <= N
+	For i <= 1 to N-1 do
+		max <= 1
+		For j <= 2 to x do
+			if(Book[j].Nama_Buku > Book[max].Nama_Buku) then
+				max <= j
+			Endif
+		Endfor
+	temp <= Book[max].Nama_Buku
+     	Book[max].Nama_Buku <= Book[j].Nama_Buku
+     	Book[j].Nama_Buku <= temp
+     	x <= x - 1
+	Endfor
+
+	x <= N
+	For i <= 1 to N-1 do
+		max <= 1
+		For j <= 2 to x do
+			if(Book[j].Harga_Beli > Book[max].Harga_Beli) then
+				max <= j
+			Endif
+		Endfor
+	temp <= Book[max].Harga_Beli
+     	Book[max].Harga_Beli <= Book[j].Harga_Beli
+     	Book[j].Harga_Beli <= temp
+     	x <= x - 1
+	Endfor
+
+	x <= N
+	For i <= 1 to N-1 do
+		max <= 1
+		For j <= 2 to x do
+			if(Book[j].Harga_Jual > Book[max].Harga_Jual) then
+				max <= j
+			Endif
+		Endfor
+	temp <= Book[max].Harga_Jual
+     	Book[max].Harga_Jual <= Book[j].Harga_Jual
+     	Book[j].Harga_Jual <= temp
+     	x <= x - 1
+	Endfor
+
+	x <= N
+	For i <= 1 to N-1 do
+		max <= 1
+		For j <= 2 to x do
+			if(Book[j].Stok > Book[max].Stok) then
+				max <= j
+			Endif
+		Endfor
+	temp <= Book[max].Stok
+     	Book[max].Stok <= Book[j].Stok
+     	Book[j].Stok <= temp
+     	x <= x - 1
+	Endfor
+	
+	Output('Data Buku')
+	Output('--------------------------------------------------------------------------')
+	Output('| Kode Buku |     Nama Buku     |  Harga Beli  | Stok |    Harga Jual    |')
+	Output('--------------------------------------------------------------------------')
+	
+	//Memasukkan Data Buku
+	For i <= 1 to N do
+		Output('|           |                   |  Rp.         |      |    Rp.           |')
+		Output(Book[i].Kode_Buku)
+		Output(Book[i].Nama_Buku)
+		Output(Book[i].Harga_Beli)
+		Output(Book[i].Stok)
+		Book[i].Harga_Jual <= FungsiHarga(Book[i].Stok,Book[i].Harga_Beli)
+		Output(Book[i].Harga_Jual:0:3)
+	Endfor
+	Output('--------------------------------------------------------------------------')
+Endprocedure 
+
+Procedure MenuPilihan
+{I.S : User memilih 3 menu pilihan}
+{F.S : Menampilkan menu pilihan yang di pilih user}
+
+Kamus :
+
+Algoritma :
+	Output('------------------------MAIN MENU---------------------------------')
+	Output('')
+	Output('1. Mengisi Data Buku')
+	Output('2. Menampilkan Hasil Data Dan Mengurutkan Nya Secara Ascending')
+	Output('0. Exit')
+	Output('')
+	Output('Menu yang di pilih : ')
+	Input(Pilihan)
+	Output('------------------------------------------------------------------')
+Endprocedure
+
+//Algoritma Utama
+
+DataBuku
+{I.S. : User memasukkan kode buku, harga beli dan stok buku}
+{F.S. : Menampilkan data buku beserta harga jualnya}
+
+Kamus :
+	const
+     		Max_Buku = 5
+     		username2 = 'admin'
+     		password2 = '12345678'
+	type
+		Data_Buku = record
+         		Kode_Buku, Nama_Buku : string,
+         		Harga_Beli, Stok     : integer,
+         		Harga_Jual           : real
+		Endrecord
+		Buku = array [1..Max_Buku] of Data_Buku
+
+	Book  : Buku
+     	N,Pilihan     : integer // Banyaknya data
+     	username1, password1 : string
+     	JumMasukPassword : integer
+	Procedure MenuPilihan
+	Procedure TampilData(Input N:integer;Book:Buku)
+	Procedure Isidata(Output N:integer;Output Book:buku)
+	Procedure Peringatan
+	Procedure Salah
+	Procedure Benar
+
+Algoritma :
+	JumMasukPassword <= 0
+    repeat
+     Output('Masukkan Username : ')
+     Input(username1)
+     Output('Masukkan Password : ')
+     Input(password1)
+     if (periksa_password(password1)) then
+        Benar
+        repeat
+        MenuPilihan
+        Depend On Pilihan
+          1 :  IsiData(N,Book)
+          2 :  TampilData(N,Book)
+	  0 :  Output('Jangan lupa kembali lagi ya :D')
+	EndDepend
+     	until (Pilihan = 0)
+     else
+     	Salah
+     	Peringatan
+     Endif
+     until (JumMasukPassword = 3)or(periksa_password(password1) = true)
+     Output('Terima kasih sudah menggunakan program ini Bye Bye !')
+     
+

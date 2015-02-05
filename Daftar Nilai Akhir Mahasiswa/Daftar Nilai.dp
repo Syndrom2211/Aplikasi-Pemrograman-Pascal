@@ -1,0 +1,12 @@
+[Project]
+FileName=D:\DataMahasiswa\Firdamdam_Sasmita_IF5\Minggu 6\Daftar Nilai Akhir Mahasiswa\Daftar Nilai.dp
+Name=Daftar Nilai
+MainUnit=D:\DataMahasiswa\Firdamdam_Sasmita_IF5\Minggu 6\Daftar Nilai Akhir Mahasiswa\Untitled1.pas
+UnitCount=1
+ResFiles=D:\DataMahasiswa\Firdamdam_Sasmita_IF5\Minggu 6\Daftar Nilai Akhir Mahasiswa\rsrc.rc
+NoConsole=0
+IsDll=0
+Icon=C:\Dev-Pas\bin\Mainicon.ico
+[Unit1]
+FileName=D:\DataMahasiswa\Firdamdam_Sasmita_IF5\Minggu 6\Daftar Nilai Akhir Mahasiswa\Untitled1.pas
+FileTime=1163225323

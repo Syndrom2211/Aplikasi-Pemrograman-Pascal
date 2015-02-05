@@ -1,0 +1,12 @@
+[Project]
+FileName=D:\Data_Kuliah\Algoritma_Pemrograman\Tugas_Kelompok\Penggajian\Program_Penggajian.dp
+Name=Program_Penggajian
+MainUnit=D:\Data_Kuliah\Algoritma_Pemrograman\Tugas_Kelompok\Penggajian\Penggajian.pas
+UnitCount=1
+ResFiles=D:\Data_Kuliah\Algoritma_Pemrograman\Tugas_Kelompok\Penggajian\rsrc.rc
+NoConsole=0
+IsDll=0
+Icon=C:\Dev-Pas\Icon\Mainicon.ico
+[Unit1]
+FileName=D:\Data_Kuliah\Algoritma_Pemrograman\Tugas_Kelompok\Penggajian\Penggajian.pas
+FileTime=1178163243

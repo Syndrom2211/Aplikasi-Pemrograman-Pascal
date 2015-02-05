@@ -1,0 +1,15 @@
+[Project]
+FileName=C:\Users\EDO\Desktop\Project_Algo\Sorting.dp
+Name=Sorting
+MainUnit=C:\Users\EDO\Desktop\Project_Algo\TokoBuku.pas
+UnitCount=1
+ResFiles=C:\Users\EDO\Desktop\Project_Algo\rsrc.rc
+NoConsole=0
+IsDll=0
+Icon=C:\Dev-Pas\Icon\Book.ico
+CompilerOptions=
+IncludeDirs=
+ObjFile=
+[Unit1]
+FileName=C:\Users\EDO\Desktop\Project_Algo\TokoBuku.pas
+FileTime=1176801431

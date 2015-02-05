@@ -1,0 +1,12 @@
+[Project]
+FileName=D:\DataMahasiswa\Firdamdam_Sasmita_IF5\Minggu_10\Minggu10.dp
+Name=Minggu10
+MainUnit=D:\DataMahasiswa\Firdamdam_Sasmita_IF5\Minggu_10\Minggu10s.pas
+UnitCount=1
+ResFiles=D:\DataMahasiswa\Firdamdam_Sasmita_IF5\Minggu_10\rsrc.rc
+NoConsole=0
+IsDll=0
+Icon=C:\Dev-Pas\bin\Mainicon.ico
+[Unit1]
+FileName=D:\DataMahasiswa\Firdamdam_Sasmita_IF5\Minggu_10\Minggu10s.pas
+FileTime=1176922297

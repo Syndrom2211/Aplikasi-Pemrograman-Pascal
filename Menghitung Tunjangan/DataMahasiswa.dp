@@ -1,0 +1,11 @@
+[Project]
+FileName=D:\DataMahasiswa\Firdamdam_Sasmita_IF5\Minggu 8\DataMahasiswa.dp
+Name=DataMahasiswa
+MainUnit=Untitled1
+UnitCount=1
+ResFiles=D:\DataMahasiswa\Firdamdam_Sasmita_IF5\Minggu 8\rsrc.rc
+NoConsole=0
+IsDll=0
+Icon=C:\Dev-Pas\bin\Mainicon.ico
+[Unit1]
+FileName=Untitled1

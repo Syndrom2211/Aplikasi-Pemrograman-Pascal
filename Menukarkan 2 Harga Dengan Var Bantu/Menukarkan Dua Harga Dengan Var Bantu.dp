@@ -1,0 +1,12 @@
+[Project]
+FileName=D:\Firdamdam_Sasmita_IF5\Soal 1\Menukarkan Dua Harga Dengan Var Bantu.dp
+Name=Menukarkan Dua Harga Dengan Var Bantu
+MainUnit=D:\Firdamdam_Sasmita_IF5\Soal 1\MDHDVB.pas
+UnitCount=1
+ResFiles=D:\Firdamdam_Sasmita_IF5\Soal 1\rsrc.rc
+NoConsole=0
+IsDll=0
+Icon=C:\Dev-Pas\Icon\Mainicon.ico
+[Unit1]
+FileName=D:\Firdamdam_Sasmita_IF5\Soal 1\MDHDVB.pas
+FileTime=1161259324

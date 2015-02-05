@@ -1,0 +1,12 @@
+[Project]
+FileName=D:\Data Mahasiswa\Firdamdam_Sasmita_IF5\Minggu 5\Data Penjualan\Data Penjualan.dp
+Name=Data Penjualan
+MainUnit=D:\Data Mahasiswa\Firdamdam_Sasmita_IF5\Minggu 5\Data Penjualan\Data Penjualans.pas
+UnitCount=1
+ResFiles=D:\Data Mahasiswa\Firdamdam_Sasmita_IF5\Minggu 5\Data Penjualan\rsrc.rc
+NoConsole=0
+IsDll=0
+Icon=C:\Dev-Pas\bin\Mainicon.ico
+[Unit1]
+FileName=D:\Data Mahasiswa\Firdamdam_Sasmita_IF5\Minggu 5\Data Penjualan\Data Penjualans.pas
+FileTime=1162767149
